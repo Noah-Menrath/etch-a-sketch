@@ -15,11 +15,19 @@ for (i=0; i < o; i++) {
     div.addEventListener("mouseover", function() {
         document.getElementsByClassName("square")[5].style.backgroundColor = "black";
     })
+    
+
+    div.addEventListener('mouseover', changeColor);
 
 
     
 };
+function changeColor(event) {
+    event.target.style.backgroundColor = "black";
+};
 
+
+changeColor();
 
 // const div = document.getElementsByClassName("square");
 
