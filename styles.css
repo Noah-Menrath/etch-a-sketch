@@ -1,0 +1,27 @@
+body {
+    background-color: tan;
+    display: flex;
+    border: 1px solid black;
+}
+
+#container {
+    border:1px solid red;
+    display: grid;
+    width: 650px;
+    height: 650px;
+    margin-left: 550px;
+    margin-top: 30px;
+    grid-template-columns: repeat(16, 6.25%);
+   
+    
+    
+
+}
+
+.square {
+    border: 1px solid blue;
+    background-color: white;
+   
+    
+    
+}
