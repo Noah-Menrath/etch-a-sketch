@@ -34,35 +34,54 @@ function runGame() {
       
     };
 
-    if (sizeGrid <= 100) {
-        for (i=0; i < sizeGrid; i++) {
-            const div = document.createElement('div');
-            div.setAttribute('class', 'square');
-            container.append(div);
+    // if (sizeGrid <= 100) {
+    //     for (i=0; i < sizeGrid; i++) {
+    //         const div = document.createElement('div');
+    //         div.setAttribute('class', 'square');
+    //         container.append(div);
         
 
-            div.addEventListener('mouseover', changeColor);
+    //         div.addEventListener('mouseover', changeColor);
 
-            container.addEventListener('click', clearData);
+    //         container.addEventListener('click', clearData);
 
-            function clearData() {
-                div.setAttribute('style', 'backgroundColor: white');
+    //         function clearData() {
+    //             div.setAttribute('style', 'backgroundColor: white');
                 
-            };
-        };
+    //         };
+    //     };
 
-            linkClearButton.addEventListener("click", clearData);
-    } else {
-        console.log("WOOO");
+    //         linkClearButton.addEventListener("click", clearData);
+    // } else {
+    //     console.log("WOOO");
+    // }
+
+
+
+const size16 = document.getElementById("size16");
+
+
+
+
+
+const form = document.getElementById('form');
+form.addEventListener('submit', changeGridSize);
+
+function changeGridSize(event) {
+    if (form == size16) {
+        console.log("YOOOOOOOOO");
     }
-
-        
-
-    
-
+    else if (form == 1024) {
+        console.log("HMMMMMMMMMMM");
+    }
+    else if (form == 4096) {
+        console.log("DUDUUDDUDUUDUDU");
+    } else {
+        console.log("WHATTT????");
+    }
+    event.preventDefault();
+}
    
-
-
 
 };
 function changeColor(event) {
