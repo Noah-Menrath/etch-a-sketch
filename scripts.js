@@ -9,6 +9,8 @@ o = (16 * 16); // have an input box for how many boxes user wants or even have a
 
 const linkClearButton = document.querySelector("#clearButton");
 
+const sizeGrid = document.querySelector("#inputBox")
+
 body.append(container);
 
 function runGame() {
@@ -31,6 +33,32 @@ function runGame() {
 
       
     };
+
+    if (sizeGrid <= 100) {
+        for (i=0; i < sizeGrid; i++) {
+            const div = document.createElement('div');
+            div.setAttribute('class', 'square');
+            container.append(div);
+        
+
+            div.addEventListener('mouseover', changeColor);
+
+            container.addEventListener('click', clearData);
+
+            function clearData() {
+                div.setAttribute('style', 'backgroundColor: white');
+                
+            };
+        };
+
+            linkClearButton.addEventListener("click", clearData);
+    } else {
+        console.log("WOOO");
+    }
+
+        
+
+    
 
    
 
@@ -61,15 +89,3 @@ function changeColor(event) {
 
 
 runGame();
-
-
-
-
-
-// const div = document.getElementsByClassName("square");
-
-// function runGame() {
-    
-// runGame()
-
-// div.addEventListener("mouseover", changeColor);
