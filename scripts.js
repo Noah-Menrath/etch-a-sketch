@@ -7,24 +7,64 @@ container.setAttribute('id', 'container');
 
 o = (16 * 16); // have an input box for how many boxes user wants or even have a few button choices //
 
+const linkClearButton = document.querySelector("#clearButton");
+
 body.append(container);
-for (i=0; i < o; i++) {
-    const div = document.createElement('div');
-    div.setAttribute('class', 'square');
-    container.append(div);
+
+function runGame() {
+    for (i=0; i < o; i++) {
+        const div = document.createElement('div');
+        div.setAttribute('class', 'square');
+        container.append(div);
+    
+
+        div.addEventListener('mouseover', changeColor);
+
+        container.addEventListener('click', clearData);
+
+        function clearData() {
+            div.setAttribute('style', 'backgroundColor: white');
+            
+        }
+
+        linkClearButton.addEventListener("click", clearData);
+
+      
+    };
+
    
 
-    div.addEventListener('mouseover', changeColor);
 
 
-    
 };
 function changeColor(event) {
     event.target.style.backgroundColor = "black";
 };
 
 
-changeColor();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+runGame();
+
+
+
+
 
 // const div = document.getElementsByClassName("square");
 
