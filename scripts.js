@@ -12,10 +12,7 @@ for (i=0; i < o; i++) {
     const div = document.createElement('div');
     div.setAttribute('class', 'square');
     container.append(div);
-    div.addEventListener("mouseover", function() {
-        document.getElementsByClassName("square")[5].style.backgroundColor = "black";
-    })
-    
+   
 
     div.addEventListener('mouseover', changeColor);
 
