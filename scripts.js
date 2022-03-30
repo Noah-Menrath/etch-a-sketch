@@ -58,29 +58,29 @@ function runGame() {
 
 
 
-const size16 = document.getElementById("size16");
+// const size16 = document.getElementById("size16");
 
 
 
 
 
 const form = document.getElementById('form');
-form.addEventListener('submit', changeGridSize);
+// form.addEventListener('submit', changeGridSize);
 
-function changeGridSize(event) {
-    if (form == size16) {
-        console.log("YOOOOOOOOO");
-    }
-    else if (form == 1024) {
-        console.log("HMMMMMMMMMMM");
-    }
-    else if (form == 4096) {
-        console.log("DUDUUDDUDUUDUDU");
-    } else {
-        console.log("WHATTT????");
-    }
-    event.preventDefault();
-}
+// function changeGridSize(event) {
+//     if (form == size16) {
+//         console.log("YOOOOOOOOO");
+//     }
+//     else if (form == 1024) {
+//         console.log("HMMMMMMMMMMM");
+//     }
+//     else if (form == 4096) {
+//         console.log("DUDUUDDUDUUDUDU");
+//     } else {
+//         console.log("WHATTT????");
+//     }
+//     event.preventDefault();
+// }
    
 
 };
@@ -91,14 +91,28 @@ function changeColor(event) {
 
 
 
+function changeGridSize() {
+    if (document.getElementById('size16').checked) {
+        console.log("YOOOOOOOO!");
+    }
+    else if (document.getElementById('size32').checked) {
+        console.log("HMMMMMMMMMMMMMMMMM")
+    }
+    else if (document.getElementById('size64').checked) {
+        console.log("DUDUDUDUDUDU!!!!!!!!!")
+    }
+    else {
+        console.log("AHHHHHH!!!");
+    }
+
+   
+};
 
 
 
 
 
-
-
-
+changeGridSize()
 
 
 
