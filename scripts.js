@@ -34,56 +34,15 @@ function runGame() {
       
     };
 
-    // if (sizeGrid <= 100) {
-    //     for (i=0; i < sizeGrid; i++) {
-    //         const div = document.createElement('div');
-    //         div.setAttribute('class', 'square');
-    //         container.append(div);
-        
-
-    //         div.addEventListener('mouseover', changeColor);
-
-    //         container.addEventListener('click', clearData);
-
-    //         function clearData() {
-    //             div.setAttribute('style', 'backgroundColor: white');
-                
-    //         };
-    //     };
-
-    //         linkClearButton.addEventListener("click", clearData);
-    // } else {
-    //     console.log("WOOO");
-    // }
-
-
-
-// const size16 = document.getElementById("size16");
+    
 
 
 
 
-
-const form = document.getElementById('form');
-// form.addEventListener('submit', changeGridSize);
-
-// function changeGridSize(event) {
-//     if (form == size16) {
-//         console.log("YOOOOOOOOO");
-//     }
-//     else if (form == 1024) {
-//         console.log("HMMMMMMMMMMM");
-//     }
-//     else if (form == 4096) {
-//         console.log("DUDUUDDUDUUDUDU");
-//     } else {
-//         console.log("WHATTT????");
-//     }
-//     event.preventDefault();
-// }
-   
 
 };
+
+
 function changeColor(event) {
     event.target.style.backgroundColor = "black";
 };
@@ -91,32 +50,32 @@ function changeColor(event) {
 
 
 
-function changeGridSize() {
-    if (document.getElementById('size16').checked) {
-        console.log("YOOOOOOOO!");
-    }
-    else if (document.getElementById('size32').checked) {
-        console.log("HMMMMMMMMMMMMMMMMM")
-    }
-    else if (document.getElementById('size64').checked) {
-        console.log("DUDUDUDUDUDU!!!!!!!!!")
-    }
-    else {
-        console.log("AHHHHHH!!!");
-    }
 
-   
+
+const size16 = document.getElementById("size16");
+const size32 = document.getElementById("size32");
+const size64 = document.getElementById("size64");
+
+function changeGridSize() {
+// add something like this: if the submit button is clicked, then do this: //
+    if (size16.checked == true) {
+        console.log("Changing to 16x16 grid size.");
+    }
+    else if (size32.checked == true) {
+        console.log("Changing to 32x32 grid size.");
+    }
+    else if (size64.checked == true) {
+        console.log("Changing to 64x64 grid size.");
+    } 
+    else {
+        console.log("NOOOOOOOOOOOOOOOOOO!!!!!")
+    }
 };
 
 
+const submitButton = document.getElementById("submitButton");
 
-
-
-changeGridSize()
-
-
-
-
+submitButton.addEventListener('click', changeGridSize);
 
 
 
