@@ -14,7 +14,7 @@ body {
     width: 650px;
     height: 650px;
     
-    grid-template-columns: repeat(16, 6.25%);
+    
     margin-top: 75px;
     justify-content: center;
     margin-bottom: 75px;

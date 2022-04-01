@@ -10,27 +10,10 @@
     <body>
         <h1>Etch-A-Sketch!</h1>
         <button id="clearButton">Clear</button>
-        <input id="inputBox"></input>
-        <form id="form">
-            <p>Size of Grid:</p>
-            <div>
-                <input type="radio" id="size16" name="gridSize"
-            value="256">
-                <label for="16">16x16</label>
-            </div>
-            <div>
-                <input type="radio" id="size32" name="gridSize"
-            value="1024">
-                <label for="32">32x32</label>
-            </div>
-            <div>
-                <input type="radio" id="size64" name="gridSize"
-            value="4096">
-                <label for="64">64x64</label>
-            </div>
-            <div><button type="submit" id="submitButton">Submit</button>
-            </div>
-        </form>
+        <div id="buttonPanel">
+            <button id="size16">16x16</button>
+            <button id="size32">32x32</button>
+            <button id="size64">64x64</button>
         </div>
         
     </body>
