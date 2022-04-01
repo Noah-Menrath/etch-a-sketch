@@ -34,6 +34,39 @@ const size16 = document.getElementById("size16");
 const size32 = document.getElementById("size32");
 const size64 = document.getElementById("size64");
 
+
+
+
+
+// creates the first grid the user sees (16x16 grid by default) //
+function startGrid() {
+    for (i=0; i < 256; i++) {
+        const div = document.createElement('div');
+        div.setAttribute('class', 'square');
+        container.append(div);
+        div.addEventListener('mouseover', changeColor);
+
+        
+
+        function clearData() {
+            div.setAttribute('style', 'backgroundColor: white');
+            
+        }
+
+        linkClearButton.addEventListener("click", clearData);
+        size16.addEventListener("click", clearData);
+        
+        
+    }
+}
+function startingGridSize() {
+    container.style.gridTemplateColumns = "repeat(16, 6.25%)";
+    container.style.gridTemplateRows = "repeat(16, 6.25%)";
+}
+
+startGrid();
+startingGridSize();
+
 // Button changes grid to 16x16 //
 
 function changeGridTo16() {
